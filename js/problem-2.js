@@ -14,3 +14,31 @@
 // যদি কোনো শর্তই পূরণ না হয়, তাহলে একটি ডিফল্ট ট্যাগ "Tag: General"
 
 // ADVANCED: কেস ইনসেনসিটিভ Handle করো।
+
+let productDescription = "cotton sale new arrival limited edition";
+
+let allData = "";
+
+for (let i = 0; i < productDescription.length; i++) {
+  allData += productDescription[i];
+  if (allData.includes("cotton")) {
+    console.log("Material: Cotton");
+    break;
+  } else if (allData.includes("sale")) {
+    console.log("Category: Sale Item");
+    break;
+  } else if (allData.includes("new arrival")) {
+    console.log("Status: New Arrival");
+    break;
+  } else if (allData.includes("limited edition")) {
+    console.log("Availability: Limited");
+    break;
+  } else {
+    console.log("Tag: General");
+    break;
+  }
+}
+
+let details = productDescription.includes("sale");
+
+console.log(details, "Material: Cotton");
